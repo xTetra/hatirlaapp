@@ -34,7 +34,7 @@
 <body>
 <main>
   <h1>Hat&#305;rla Privacy Policy</h1>
-  <p class="updated"><strong>Last updated:</strong> July 20, 2026</p>
+  <p class="updated"><strong>Last updated:</strong> July 29, 2026</p>
 
   <p>This Privacy Policy explains how Tetra Yaz&#305;l&#305;m ("we," "us," or "our") processes information in the Hat&#305;rla Android application (the "App"). Hat&#305;rla is designed as an offline-first personal notes, tasks, and reminders application. The contents of your notes, tasks, reminders, PIN, backup password, and audio recordings are not sent to servers operated by us.</p>
 
@@ -46,7 +46,7 @@
     <li>a one-way cryptographic representation of an optional application-lock PIN; and</li>
     <li>audio recordings created or selected by you.</li>
   </ul>
-  <p>Android system backup is disabled for the App. We do not operate a server that receives this local content, and this content is not included in advertising or analytics events.</p>
+  <p>We do not operate a server that receives this local content, and this content is not included in advertising or analytics events. As described below, the Pro version can prepare a limited recovery snapshot for Android's system backup service.</p>
 
   <h2>2. Device permissions and capabilities</h2>
   <ul>
@@ -63,6 +63,8 @@
 
   <h2>4. Encrypted backup and restore</h2>
   <p>If you choose to create a backup, the backup is encrypted with AES-256-GCM using a key derived from the password you provide. The backup is transferred only to a destination you select through the Android file or sharing interface. We do not receive or store the backup file or password. If the password is lost, we cannot recover the backup.</p>
+  <p>For users with an active Pro entitlement, the App can automatically prepare a recovery snapshot for Android's system backup service. This snapshot may contain note and reminder text, dates, recurrence settings, categories, and selected safe preferences. It excludes the application-lock PIN, purchase state, advertising or analytics identifiers, voice recordings, and custom alarm audio. Android controls when the snapshot is uploaded and restored, normally using the Google account associated with the device. Backup availability is not guaranteed and depends on Android, device, account, network, and backup settings.</p>
+  <p>Android encrypts system backup data during transfer and storage. On supported devices with a secure screen lock, Android may additionally protect backups with client-side encryption tied to the device credential. Because this additional protection is device-dependent, we do not claim that every automatic backup is universally end-to-end encrypted. We do not operate the backup server and cannot view or recover the snapshot.</p>
 
   <h2>5. Firebase Analytics</h2>
   <p>Firebase Analytics is enabled by default in current Android versions of Hat&#305;rla and does not currently have an in-app opt-out control. It may process:</p>
@@ -98,6 +100,7 @@
       <tr><td>Google AdMob</td><td>Advertising, measurement, security, and fraud prevention</td><td>Advertising and device identifiers, IP-derived approximate location, ad interactions, device data, and diagnostics</td></tr>
       <tr><td>Firebase Analytics</td><td>Analytics and application improvement</td><td>App interactions, app-instance identifier, device data, language or region, IP-derived approximate location, and diagnostics</td></tr>
       <tr><td>RevenueCat</td><td>Pro purchase management and restoration</td><td>App-user identifier, entitlement and transaction status, device or application data, and diagnostics</td></tr>
+      <tr><td>Android system backup</td><td>Optional automatic Pro recovery after reinstall or device change</td><td>Limited recovery snapshot containing note and reminder text, categories, dates, recurrence settings, and selected preferences; no PIN or audio</td></tr>
     </tbody>
   </table>
   <p>For more information, review the providers' policies:</p>
@@ -113,25 +116,30 @@
   <p>We process local information as necessary to provide the features requested by you. Third-party analytics is used for our legitimate interest in understanding and improving the App, subject to applicable law. Advertising identifiers and personalized advertising are processed based on consent where consent is legally required. Non-personalized or limited advertising, security, fraud prevention, and purchase verification may rely on other lawful bases available under applicable law.</p>
 
   <h2>10. Retention and deletion</h2>
-  <p>Local content remains on your device until you delete individual items, use the "Delete all local data" function, or uninstall the App. Removing local data also cancels associated reminders where supported. Information previously processed by Firebase Analytics, AdMob, RevenueCat, or an app store may be retained according to each provider's retention rules and legal obligations. Deleting local App data does not automatically delete records held independently by these providers.</p>
+  <p>Local content remains on your device until you delete individual items, use the "Delete all local data" function, or uninstall the App. Removing local data also cancels associated reminders where supported and asks Android to remove the App's prepared automatic snapshot. A previously transported copy may remain subject to Android or Google backup retention and deletion behavior. Information previously processed by Firebase Analytics, AdMob, RevenueCat, or an app store may be retained according to each provider's retention rules and legal obligations. Deleting local App data does not automatically delete records held independently by these providers.</p>
 
-  <h2>11. Your choices and rights</h2>
+  <h2 id="data-deletion">11. Data deletion requests</h2>
+  <p>Hat&#305;rla does not require an account. You can delete notes, reminders, voice recordings, categories, preferences, and the prepared automatic recovery snapshot directly in the App by opening <strong>Settings &gt; Delete all local data</strong> and confirming the deletion. Local deletion takes effect immediately on the device.</p>
+  <p>To request deletion of data associated with Analytics, advertising, support, or a Pro purchase, email <a href="mailto:tetra4studios@gmail.com?subject=Hatirla%20Data%20Deletion%20Request">tetra4studios@gmail.com</a> with the subject <strong>Hatirla Data Deletion Request</strong>. Describe which service the request concerns. If the request concerns a Pro purchase, you may include the Google Play order number so the pseudonymous RevenueCat customer record can be located. Do not send your PIN, backup password, note text, reminder text, or audio content. We will respond and complete actions available to us within 30 days.</p>
+  <p>We will delete support correspondence and identifiable or pseudonymous service records under our control unless retention is required for fraud prevention, security, dispute handling, tax, accounting, or another legal obligation. Records retained for such a reason are kept only for the applicable legal period and are not used for advertising. Aggregated or irreversibly anonymized information that cannot be linked back to a user may remain. Google Play transaction records, Android or Google backups, and data controlled independently by Google, Firebase, AdMob, RevenueCat, or another app-store provider remain subject to that provider's deletion tools, legal obligations, and retention policy.</p>
+
+  <h2>12. Your choices and rights</h2>
   <p>You can manage microphone, notification, exact-alarm, and full-screen-alarm permissions in Android settings. Where required, the Google UMP consent form provides choices concerning advertising personalization and participating advertising partners. You may also reset or limit the advertising ID through Android settings.</p>
   <p>Depending on your location, you may have rights to request access, correction, deletion, restriction, portability, or objection concerning personal data, and to withdraw consent at any time. Withdrawing consent does not affect processing that occurred before withdrawal. Requests concerning data controlled directly by Google, RevenueCat, or an app store may need to be submitted to that provider.</p>
 
-  <h2>12. Children</h2>
+  <h2>13. Children</h2>
   <p>Hat&#305;rla is not directed to children under 13, or the higher minimum age required in a user's country. We do not knowingly collect children's note content. The App configures Google Mobile Ads as not child-directed and limits maximum ad content rating to parental guidance. If you believe a child has provided personal information in violation of applicable law, contact us.</p>
 
-  <h2>13. Security</h2>
-  <p>We use measures including private application storage, disabled Android system backup, one-way PIN hashing, and password-based encryption for exported backups. No electronic storage or transmission method can be guaranteed to be completely secure.</p>
+  <h2>14. Security</h2>
+  <p>We use measures including private application storage, strict inclusion of only the dedicated Pro recovery snapshot in Android system backup, exclusion of PIN and audio from that snapshot, one-way PIN hashing, and password-based AES-256-GCM encryption for manually exported backups. No electronic storage or transmission method can be guaranteed to be completely secure.</p>
 
-  <h2>14. International data processing</h2>
+  <h2>15. International data processing</h2>
   <p>Google, Firebase, RevenueCat, and app-store providers may process information in countries other than your own. Their processing is governed by their respective privacy terms and any legally required transfer safeguards.</p>
 
-  <h2>15. Changes to this policy</h2>
+  <h2>16. Changes to this policy</h2>
   <p>We may update this Privacy Policy when App features, third-party services, or legal requirements change. The current version will be identified by the "Last updated" date shown at the top of this page.</p>
 
-  <h2>16. Contact</h2>
+  <h2>17. Contact</h2>
   <p>Developer: Tetra Yaz&#305;l&#305;m<br>Email: <a href="mailto:tetra4studios@gmail.com">tetra4studios@gmail.com</a></p>
 </main>
 </body>
